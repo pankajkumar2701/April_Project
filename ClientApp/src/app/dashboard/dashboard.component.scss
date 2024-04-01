@@ -1,0 +1,43 @@
+@import '../../assets/scss/helpers/_variables.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.image-wrapper img {
+  display: block;
+  // max-width: 100%;
+  height: auto;
+}
+
+.image-wrapper h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #a2a2a2;
+  font-size: 60px;
+  opacity: 0.6;
+}
+
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Hazy background color */
+  z-index: 0;
+}
